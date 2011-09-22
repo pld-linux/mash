@@ -4,6 +4,7 @@
 %bcond_without	static_libs	# don't build static libraries
 #
 Summary:	A library for using real 3D models within a Clutter scene
+Summary(pl.UTF-8):	Biblioteka pozwalająca na używanie prawdziwych modeli 3D wewnątrz sceny Clutter
 Name:		mash
 Version:	0.2.0
 Release:	1
@@ -12,7 +13,7 @@ Group:		X11/Libraries
 Source0:	http://source.clutter-project.org/sources/mash/0.2/%{name}-%{version}.tar.xz
 # Source0-md5:	9eda552784291707e667be4d55917794
 URL:		http://wiki.clutter-project.org/wiki/Mash
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	clutter-devel >= 1.6.0
 BuildRequires:	glib2-devel >= 1:2.16.0
@@ -29,6 +30,13 @@ Mash is a small library for using real 3D models within a Clutter
 scene. Models can be exported from Blender or other 3D modeling
 software as PLY files and then used as actors. It also supports a
 lighting model with animatable lights.
+
+%description -l pl.UTF-8
+Mash to mała biblioteka pozwalająca na używanie prawdziwych modeli 3D
+wewnątrz sceny Clutter. Modele można eksportować z Blendera lub innego
+programu do modelowania 3D w postaci plików PLY, a następnie używać
+ich jako aktorów. Obsługiwane są także modele oświetlenia z ruchomymi
+światłami.
 
 %package devel
 Summary:	Header files for mash library
