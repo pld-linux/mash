@@ -2,12 +2,12 @@
 # Conditional build:
 %bcond_without	apidocs		# do not build and package API docs
 %bcond_without	static_libs	# don't build static libraries
-#
+
 Summary:	A library for using real 3D models within a Clutter scene
 Summary(pl.UTF-8):	Biblioteka pozwalająca na używanie prawdziwych modeli 3D wewnątrz sceny Clutter
 Name:		mash
 Version:	0.2.0
-Release:	7
+Release:	8
 License:	LGPL v2+
 Group:		X11/Libraries
 Source0:	http://source.clutter-project.org/sources/mash/0.2/%{name}-%{version}.tar.xz
@@ -68,6 +68,9 @@ Summary:	mash API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki mash
 Group:		Documentation
 Requires:	gtk-doc-common
+%if "%{_rpmversion}" >= "5"
+BuildArch:	noarch
+%endif
 
 %description apidocs
 API and internal documentation for mash library.
@@ -93,7 +96,6 @@ Dokumentacja API biblioteki mash.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
