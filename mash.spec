@@ -68,9 +68,7 @@ Summary:	mash API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki mash
 Group:		Documentation
 Requires:	gtk-doc-common
-%if "%{_rpmversion}" >= "5"
 BuildArch:	noarch
-%endif
 
 %description apidocs
 API and internal documentation for mash library.
